@@ -34,7 +34,8 @@ body {
 .container {
   width: 1200px;
   margin: auto;
-}
+ 
+} 
 
 /* Common_Css_End================== */
 
@@ -147,7 +148,11 @@ nav {
 /* Gammer_banner_start----------- */
 #Gammer_Banners {
   padding: 100px 0px;
-  background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 66, 165, 0.03) 0%,
+    rgba(255, 66, 165, 0.03) 100%
+  );
 }
 
 .gammer_banner {
@@ -200,7 +205,11 @@ nav {
 
 #Funny_Videos {
   margin-top: 3rem;
-  background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 66, 165, 0.03) 0%,
+    rgba(255, 66, 165, 0.03) 100%
+  );
   margin-bottom: 50px;
 }
 .online_title {
@@ -231,7 +240,6 @@ nav {
 
 .funny_card {
   width: 282px;
-
 }
 
 .funny_card img {
@@ -254,8 +262,9 @@ nav {
   transition: 0.4s;
 }
 
-.funny_card .funny_img:hover .overlay {
+.funny_img:hover .overlay {
   transform: scale(1);
+  margin-top: 3rem
 }
 
 .funny_card .overlay a {
@@ -299,6 +308,7 @@ nav {
 
 #instant {
   padding: 100px 0px;
+
 }
 
 .instantly {
@@ -347,64 +357,136 @@ nav {
 /* Instantly_Section_End=========== */
 
 /* Game_Section_Start--------- */
-/* #Game{
-  background-color: #3c354f;
-  height: 300px;
+#Game {
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
-.game_container{
+.game_container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-
 }
 
-
-
-.game{
-  width: 216px;
-  background-color: yellow;
+.game {
+  width: 230px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 5px 0px;
+  padding: 5px 2px;
   border-radius: 50px;
-  
-} */
+  margin: 15px 5px;
+  transition: 0.4s;
+}
+
+.game a {
+  color: #0b0223;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.game_container .game:hover {
+  border: 2px solid #f948b2;
+}
+
+.game_container .game a:hover {
+  color: red;
+}
 
 /* Game_section_End============ */
 
-/* #Footer{
-  margin-top: 100px;
-  margin-bottom: 50px;
-  text-align: center;
-  height: 500px;
+/* Footer_Section_Start---------- */
 
-}
-
-.footer_container{
-  text-align: center;
-  height: 500px;
+#Footer {
+width: 100vw;
+  background: white;
   
+  padding: 100px 0px;
 }
 
 
-.footer_logo{
+.footer_logo {
+  width: 252px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  padding: 0px 500px;
-
-} 
-
-.footer_logo p{
-  margin-left: 10px;
+  margin: auto;
+}
+.footer_logo p {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: black;
 }
 
-.footer_menu a{
-  padding: 100px 50px;
-} */
+.footer_logo p span {
+  color: #ff42a5;
+}
+
+#Footer .menu_items {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+#Footer .menu_items ul {
+  display: flex;
+  justify-content: center;
+}
+
+#Footer .menu_items ul li {
+  margin: 0rem 2rem;
+}
+
+#Footer .menu_items ul li a {
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.our_social_link {
+  margin-top: 4rem;
+}
+
+.our_social_link ul {
+  display: flex;
+  justify-content: center;
+}
+
+.our_social_link ul li {
+  margin: 0rem 2rem;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.fa-youtube {
+  color: red;
+}
+
+.our_social_link ul li:hover {
+  background-color: #f948b2;
+}
+
+.copyright {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.copyright p {
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+
+/* Footer_Section_End======== */
 
 /* Responsive_Mobile_Device_Start------- */
 @media screen and (max-width: 576px) {
@@ -455,6 +537,33 @@ nav {
   .img_content {
     margin-top: 6rem;
   }
+
+  .game_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .game {
+    margin: 2rem auto;
+  }
+
+  #Footer .menu_items ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+
+  #Footer .our_social_link ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  } 
+
+  #Footer .menu_items ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 /* Responsive_Mobile_Device_End========== */
@@ -513,6 +622,15 @@ nav {
 
   .img_content {
     margin-top: 6rem;
+  }
+
+  .game_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .game {
+    margin: 2rem auto;
   }
 }
 
